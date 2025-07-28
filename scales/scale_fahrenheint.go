@@ -21,6 +21,41 @@ func (f *Fahrenheit) FahrenheitStats(temp float64) {
 	f.Name = `Fahrenheit`
 }
 
+func (f Fahrenheit) GetTemp() float64 {
+
+	return f.Temp
+}
+
+func (f *Fahrenheit) SetTemp(temp float64) {
+
+	f.Temp = temp
+}
+
+func (f Fahrenheit) GetMaxTemp() float64 {
+
+	return f.Max_temp
+}
+
+func (f Fahrenheit) GetTermMinTemp() float64 {
+
+	return f.Term_min_temp
+}
+
+func (f Fahrenheit) GetMinTemp() float64 {
+
+	return f.Min_temp
+}
+
+func (f Fahrenheit) GetSymbol() rune {
+
+	return f.Symbol
+}
+
+func (f Fahrenheit) GetName() string {
+
+	return f.Name
+}
+
 func (c *Celsius) FahrenheitToCelsius(f *Fahrenheit) (float64, error) {
 
 	v = validation(f.Temp, f.Max_temp, f.Min_temp)
