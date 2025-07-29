@@ -21,6 +21,40 @@ func (k *Kelvin) KelvinStats(temp float64) {
 	k.Name = `Kelvin`
 }
 
+func (k Kelvin) GetTemp() float64 {
+
+	return k.Temp
+}
+
+func (k *Kelvin) SetTemp(temp float64) {
+
+	k.Temp = temp
+}
+
+func (k Kelvin) GetMaxTemp() float64 {
+
+	return k.Max_temp
+}
+
+func (k Kelvin) GetTermMinTemp() float64 {
+
+	return k.Term_min_temp
+}
+
+func (k Kelvin) GetMinTemp() float64 {
+
+	return k.Min_temp
+}
+
+func (k Kelvin) GetSymbol() rune {
+
+	return k.Symbol
+}
+
+func (k Kelvin) GetName() string {
+
+	return k.Name
+}
 func (c *Celsius) KelvinToCelsius(k *Kelvin) (float64, error) {
 
 	v = validation(k.Temp, k.Max_temp, k.Min_temp)
